@@ -1,0 +1,70 @@
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #3d3d3d;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav .active a, 
+.navbar-inverse .navbar-nav .active a:focus, 
+.navbar-inverse .navbar-nav .active a:hover {
+    color: #fff;
+    background-color: #3d3d3d;
+}
+
+.header {
+    background: url(../../rsc/title_enzevalos.jpg) no-repeat;
+    background-size: cover;
+}
+
+.header-container {
+    height: 200pt;
+}
+
+.caption-center {
+    color: #fff;
+    text-align: center;
+}
+
+.section-container {
+    padding: 16pt;
+    padding-bottom: 26pt;
+}
+
+.about {
+    
+}
+
+.about p {
+    font-size: 14pt;
+}
+
+.app-container {
+    background-color: #3d3d3d;
+    color: #fff;
+}
+
+.app {
+    
+}
+
+.app p {
+    font-size: 14pt;
+}
+
+.motivation {
+    
+}
+
+.motivation p {
+    font-size: 14pt;
+}
+
+.goals {
+    
+}
+
+.goals p {
+    font-size: 14pt;
+}
