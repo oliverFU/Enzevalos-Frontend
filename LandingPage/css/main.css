@@ -1,4 +1,9 @@
 
+ol li,
+ul li {
+    font-size: 14pt;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -32,38 +37,25 @@
     padding-bottom: 26pt;
 }
 
-.about {
-    background-color: #3d3d3d;
-    color: #fff;
-}
-
 .about p {
     font-size: 14pt;
 }
 
-.app-container {
+.dark {
     background-color: #3d3d3d;
     color: #fff;
 }
 
-.app {
-    
+.dark a {
+    color: #f39c12
 }
 
 .app p {
     font-size: 14pt;
 }
 
-.motivation {
-    
-}
-
 .motivation p {
     font-size: 14pt;
-}
-
-.goals {
-    
 }
 
 .goals p {
