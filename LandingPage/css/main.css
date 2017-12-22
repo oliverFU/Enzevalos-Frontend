@@ -61,3 +61,7 @@ ul li {
 .goals p {
     font-size: 14pt;
 }
+
+.app-screenshot img {
+    height: 480px;
+}
