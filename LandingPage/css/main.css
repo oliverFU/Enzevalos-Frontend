@@ -1,3 +1,7 @@
+.section-container ol li,
+.section-container ul li {
+    font-size: 12pt;
+}
 
 
 .navbar {
@@ -33,8 +37,13 @@
     padding-bottom: 26pt;
 }
 
+.faq-container {
+    padding: 16pt;
+    padding-bottom: 26pt;
+}
+
 .about p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .dark {
@@ -46,16 +55,20 @@
     color: #f39c12
 }
 
+.dark p{
+    font-size: 12pt;
+}
+
 .app p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .motivation p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .goals p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .app-screenshot img {
