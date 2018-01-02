@@ -133,7 +133,7 @@
             </div>
             <div class="col-md-4 hidden-sm">
                 <div class="app-screenshot">
-                    <img src="../../rsc/app_screenshot.png"/>
+                    <img src="../rsc/app_screenshot.png"/>
                 </div>
             </div>
         </div>
@@ -141,75 +141,666 @@
     
     <div id="faq" class="faq section-container">
         <h1>Häufige Fragen</h1>
-        
         <h2>Unsere App: Letterbox</h2>
-        <ol>
-            <li>Was ist eine sichere E-Mail?</li>
-            <li>Was für Kryptographie wird verwendet?</li>
-            <li>Was ist ein Brief?</li>
-            <li>Was ist eine Postkarte?</li>
-            <li>Was ist ein angerissender Brief?</li>
-            <li>Ich habe den Hinweis bekommen: <q>Die Person verschickte vorher sichere E-Mails</q>. Was bedeutet das?</li>
-            <li>Warum kann ich nicht mit jedem sofort sicher kommunizieren?</li>
-            <li>Warum ist die Inbox so anders organisiert?</li>
-            <li>Wieso taucht eine Person mehrfach in der Inbox auf?</li>
-            <li>Für was brauche ich den QR-Code in meiner Ablage?</li>
-            <li>Was sind die Schlüssel-Details?</li>
-            <li>Was ist ein Fingerabdruck?</li>
-            <li>Was ist PGP?</li>
-            <li>Ich sehe ein unverständlichen Text der mit <q>----- Begin PGP...</q> anfängt. Was ist das?</li>
-            <li>Was ist dieser Badgecase?</li>
-            <li>Wie kann ich meine sichere Kommunikation erhöhen?</li>
-            <li>Was ist ein Brief? Eine Postkarte? Ein Schloss? Ein Schlüssel? Eine verschlüsselte und signierte Nachricht?</li>
-            <li>Ich kann meine Briefe nicht auf anderen Geräten lesen.</li>
-            <li>Wie kann ich einen öffentlichen Schlüssel importieren?</li>
-            <li>Wie kann ich meinen öffentlichen Schlüssel exportieren?</li>
-            <li>Wie kann ich mein Geheimnis (privaten Schlüssel) sichern?</li>
-        </ol>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="secureMail">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#secureMailAnswer" aria-expanded="false" aria-controls="secureMailAnswer">
+                                Was ist eine sichere E-Mail?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="secureMailAnswer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="secureMail">
+                        <div class="panel-body">
+                            <p>Eine sichere E-Mail können nur die adressierten Personen lesen und nicht der E-Mail-Provider oder andere Dritte. Außerdem wurde die E-Mail nicht auf dem Weg verändert und der Abssenderidentität ist auch bekannt. Eine sichere E-Mail wurde verschlüsselt und mit einer Digitalen Signatur versehen. Sie ähnlt so eher einem Brief als eine Postkarte. </p> 
+                            <!-- Hinweis: Fälschen von E-Mails? Self traning. Was ist eine sichere E-Mail nicht?--> 
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingCrypto">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#answerCrypto" aria-expanded="false" aria-controls="answerCrypto">
+                                Was für Kryptographie wird verwendet?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="answerCrypto" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCrypto">
+                        <div class="panel-body">
+                           Zur Ende-zu-Ende-Verschlüsselung verwenden wir OpenPGP. OpenPGP ist freiverfügbar, standardisierte und für fast alle Geräte und Betriebssysteme verfügbar. Wir haben die OpenPGP auch nicht selber implementiert, sondern verwenden ObjectivePGP. ObjectivePGP ist freiverfügbar. 
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingLetter">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#answerLetter" aria-expanded="false" aria-controls="answerLetter">
+                                 Was ist ein Brief?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="answerLetter" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLetter">
+                        <div class="panel-body">
+                            Ein Brief symbolisiert eine sichere E-Mail. Sie kann nicht von Dritten, wie dem E-Mail-Provider, gelesen werden und die Identität ist bekannt.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingPostcard">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePostcard" aria-expanded="false" aria-controls="collapsePostcard">
+                                 Was ist eine Postkarte?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePostcard" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPostcard">
+                        <div class="panel-body">
+                            Eine Postkarte ist eine herkömmliche und unsichere E-Mail. Der E-Mail-Provider und andere können die E-Mail lesen und manipuliert werden. Der Absender kann gefälscht werden und die E-Mail ist nicht sehr vertrauensvoll. Solche E-Mails sind vergleichbar mit einer herkömmlichen Postkarte. Würden Sie gerne Ihre Rechnungen per Postkarte erhalten und diese bezahlen?
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTorn">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTorn" aria-expanded="false" aria-controls="collapseTorn">
+                                 Was ist ein angerissener Brief?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTorn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTorn">
+                        <div class="panel-body">
+                            Vorsicht! Hier ist etwas merkwürdig. Die E-Mail konnte manipuliert sein.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingWarning">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseWarning" aria-expanded="false" aria-controls="collapseWarning">
+                                 Ich habe den Hinweis bekommen: <q>Die Person verschickte vorher sichere E-Mails</q>. Was bedeutet das?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWarning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingWarning">
+                        <div class="panel-body">
+                            <p>Vorsicht! Hier ist etwas merkwürdig. Die letzten E-Mails von dieser Person waren sicher und die aktuelle E-Mail war eine unsichere. Es gibt dafür zwei Erklärungen:</p>
+                            <ol>
+                                <li>Jemand anders hat die E-Mail versendet und möchte Sie täuschen. Dies ist ein gefährlicher Angriff. Sie sollten keine Links aus der E-Mail aufrufen, noch vertrauliche Informationen (Passwörter, Kreditkartennummern) preisgeben.</li>
+                                <li>Der Absender ist echt, aber hat keinen Zugriff auf sein Geheimnis um seine Identität nachzuweisen (z.B. im Urlaub oder ein fremdes Gerät) oder hat vergessen Ihnen eine sichere E-Mail zu senden.</li>
+                            </ol>
+                            <p>Seinen Sie als gegenüber der aktuellen E-Mail misstrauisch und glauben Sie nicht unbedingt dem Inhalt. Wir können leider nicht entscheiden, welcher der beiden Fälle eingetreten ist. Falls Sie sich nicht ganz sicher sind, können Sie dem ursprünglichen Absender eine sichere E-Mail senden und nachfragen. Alternativ können Sie ihn vielleicht auch einfach anrufen? </p><!-- Problem: neuer Schlüssel eingeführt. -->
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingInstant">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstant" aria-expanded="false" aria-controls="collapseInstant">
+                                 Warum kann ich nicht sofort jedem einen Brief schreiben. Warum kann ich nicht mit jedem sofort sicher kommunizieren?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInstant" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingInstant">
+                        <div class="panel-body">
+                            <p>Die andere Person muss auch ein Geheimnis erzeugen und Sie erst benachrichtigen, dass ein Geheimnis erzeugt wurde. Darum können biszu zwei Nachrichten noch nicht sicher sein. Sie sollten darum um eine Benachrichtigung bitten, wenn das Geheimnis erzeugt wurde. </p> <!-- Abuse Mitteilungen  von anderen?-->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingInbox">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInbox" aria-expanded="false" aria-controls="collapseInbox">
+                                 Warum ist die Inbox so anders organisiert?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInbox" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingInbox">
+                        <div class="panel-body">
+                            <p>Die Inbox ist nach Personen organisiert, wobei alle unsicheren E-Mails einer Person gesammelt werden. Sichere E-Mails werden nach der kryptographischen Identität des Absenders gesammelt. Wobei jede kryptographsichen Identität mit einer Person assoziert wird. Allerdings kann eine Person auch mehrere kryptographische Identitäten besitzen.</p>
+                            <!-- Problem: Begriff: Identität ist fraglich. -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingInbox2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInbox2" aria-expanded="false" aria-controls="collapseInbox2">
+                                 Wieso taucht eine Person mehrfach in der Inbox auf?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInbox2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p>Jede Person kann mehrere kryptographsiche Identitäten besitzen, aber auch Fremde können eine kryptographische Identität für jemanden anders erzeugen. Wenn ein weiterer Eintrag mit einem Brief für eine Person auftaucht, sollte man hier misstrauisch werden und über eine andere Kommunikationsmöglichkeit (Telefon, Whatsapp, Telegram, SMS etc.) nachfragen.</p> <!--Hinweis hier auch Angriffsmöglichkeit?  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingQR">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseQR" aria-expanded="false" aria-controls="collapseQR">
+                                 Wozu brauche ich den QR-Code in meiner Ablage?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseQR" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQR">
+                        <div class="panel-body">
+                            <p>Mit dem QR-Code wird die kryptographische Identität überprüft. Wenn Sie jemanden persönlichen treffen mit dem Sie sichere E-Mails austauschen, können Sie gegenseitig den QR-Code vom anderen einscannen. Damit ist dann endgültig bewiesen, dass niemand Ihre sicheren E-Mails mit der Person manipuliert oder mitliest. Sie schließen damit einen sogenannten Mittelmanns-Angriff aus. Falls Sie jemanden treffen, öffenen Sie dessen Kontaktansicht in Ihrer App und dürcken Sie auf <q>Jetzt verifizieren</q>. Dann kann Sie den QR-Code vom anderen.</p> <!-- Verweis Mittelmanns-Angriff, In App: Nach Scann eigenen QR-Code zeigen??? Fingerabruck???-->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingKeyDetails">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseKeyDetails" aria-expanded="false" aria-controls="collapseKeyDetails">
+                                 Was sind die Schlüssel-Details?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseKeyDetails" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingKeyDetails">
+                        <div class="panel-body">
+                            <p>Das Gerät erzeugt ein kryptographisches Geheimnis für Sie. Dieses Geheimnis wird auch geheimer oder privater Schlüssel genannt. In der Detail-Ansicht finden Sie einige Informationen zu dem Schlüssel und Sie können den öffentlichen Teil kopieren. </p> <!-- Überarbeitung von Key Details -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFingerprint">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFingerprint" aria-expanded="false" aria-controls="collapseFingerprint">
+                                 Was ist ein Fingerabdruck?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFingerprint" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFingerprint">
+                        <div class="panel-body">
+                            <p>Mit dem Fingerabdruck kann man eine kryptographische Identität eindeutig wiedererkennen ohne die gesamte kryptographische Identität zu vergleichen. Dies ist vergleichbar mit dem menschlichen Fingerabdruck. Technisch ist der Fingerabruck ein Hash-Wert der kryptographischen Identität.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOpenPGP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOpenPGP" aria-expanded="false" aria-controls="collapseOpenPGP">
+                                 Was ist OpenPGP?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOpenPGP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOpenPGP">
+                        <div class="panel-body">
+                            <p>OpenPGP ist ein freiverfügbarer Verschlüsselungsstandard und wird von vielen E-Mail-Clients unterstützt. Er ist auch bekannt als PGP oder GPG.<!-- URL auf WIkipedia Artikel.--></p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingBeginPGP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseBeginPGP" aria-expanded="false" aria-controls="collapseBeginPGP">
+                                 Ich sehe ein unverständlichen Text der mit <q>----- Begin PGP...</q> anfängt. Was ist das?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseBeginPGP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBeginPGP">
+                        <div class="panel-body">
+                            <p>Dies ist ein Kandidat für eine sichere E-Mail. Wenn Sie eine solche Nachricht in Letterbox sehen, konnte diese nicht entschlüsselt werden und ist somit unlesbar. Wenn Sie auf anderen Geräten eine kryptographische Identität haben, sollten Sie diese importieren. Dann kann die Nachricht eventuell lesbar werden. Ansonsten bitten Sie den Absender die Nachricht nochmla zu versenden und diesmal die richtige kryptographische Identität von Ihnen zu beachten. <!-- Eventuell E-Mail mit bitte nochmal versenden mein Fingerabruck ist... --></p>
+                            <p>Falls Sie diese Nachricht auf einem anderen Gerät sehen, sollten Sie dort auch Ihre kryptographische Identität hinterlegen. <!-- Verweis auf Import --></p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingBadge">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseBadge" aria-expanded="false" aria-controls="collapseBadge">
+                                 Was ist dieser Badgecase?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseBadge" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBadge">
+                        <div class="panel-body">
+                            <p>Im Badgecase werden Ihre Auszeichnungen für die Verwendung von sicherer E-Mail dargestellt. Sie bekommen Auszeichnungen, wenn Sie sicher kommunizieren, andere Einladen oder Ihre Identität auf einem anderen Gerät speichern.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingMore">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseMore" aria-expanded="false" aria-controls="collapseMore">
+                                 Wie kann ich meine sichere Kommunikation erhöhen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseMore" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMore">
+                        <div class="panel-body">
+                            <p>Wenn immer möglich, versendet Letterbox sichere E-Mails. Ihre Gesprächspartnerinnen und -Partner müssen nur mitmachen. Laden Sie diese doch ein mitzumachen!</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingMeanings">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseMeanings" aria-expanded="false" aria-controls="collapseMeanings">
+                                 Was ist ein Brief? Eine Postkarte? Ein Schloss? Ein Schlüssel? Eine verschlüsselte und signierte Nachricht?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseMeanings" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMeanings">
+                        <div class="panel-body">
+                            <p>Ein Brief ist eine sichere also verschlüsselte und signierte E-Mail. In anderen Anwendungen wird dies mit einem geschlossenen Vorhängeschloß häufig dargestellt.</p>
+                            <p>Eine Postkarte ist eine unsichere E-Mail. Sie wurde nicht nicht verschlüsselt oder nicht signiert. Andere Anwendungen haben hierfür ein offenes Schloß oder gar kein Symbol.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNoReading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNoReading" aria-expanded="false" aria-controls="collapseNoReading">
+                                 Ich kann meine Briefe nicht auf anderen Geräten lesen.
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseNoReading" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNoReading">
+                        <div class="panel-body">
+                            <p>Zum Lesen eines Briefes benötigen Sie das Geheimnis. Anfangs ist das Geheimnis nur in Letterbox. Sie müssen es auf andere Geräte übertragen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingImport">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseImport" aria-expanded="false" aria-controls="collapseImport">
+                                 Wie kann ich ein Schloß/öffentlichen Schlüssel importieren?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseImport" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingImport">
+                        <div class="panel-body">
+                            <p>Wenn ein Schloß oder auch bekannt als öffentlicher Schlüssel in einer E-Mail entdeckt wird, wird dieser automatisch importiert. Dies ist der einzige Weg ein Schloß zu importieren. Wir unterstützten dabei auch Autocrypt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingPublicKey">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePublicKey" aria-expanded="false" aria-controls="collapsePublicKey">
+                                 Wo finde ich mein Schloß/öfentlichen Schlüssel?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePublicKey" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPublicKey">
+                        <div class="panel-body">
+                            <p>Klicken Sie auf ID in der Inbox. Anschließend befinden Sie sich in Iher Ablage und gehen weiter zu Schlüssel-Details. Nun klicken Sie auf Schloß kopieren. Das Schloß/öffentliche Schlüssel befindet sich nun in Ihrer Ablage. Sie können Ihn einfach nun woanders einfügen. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingBackUp">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseBackUp" aria-expanded="false" aria-controls="collapseBackUp">
+                                 Wie kann ich mein Geheimnis (privaten Schlüssel) sichern?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseBackUp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBackUp">
+                        <div class="panel-body">
+                            <p>Klicken Sie auf ID in der Inbox. Anschließend befinden Sie sich in Ihrer Ablage. Klicken Sie nun auf E-Mails auf einem anderen Gerät lesen. Folgen Sie den Anweisungen und schreiben Sie sich den Code gut und sicher auf. Zum Beispiel können Sie in einem Ordner ablegen. Ihre Identität wurde verschlüsselt in Ihrer Inbox abelegt. Ein Zugriff ist nur mit dem Code möglich. Bewahren Sie den Code sicher auf!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <h2>Andere Geräte</h2>
-        <ol>
-            <li>Ich habe einen Windows-Rechner. Kann ich auch meine E-Mails sicher übertragen?</li>
-            <li>Ich habe eine Mac-Rechner.</li>
-            <li>Ich habe eine Linux-Rechner.</li>
-            <li>Wie bekomme ich mein Geheimnis (privaten Schlüssel) auf meine anderen Geräte?</li>
-            <li>Ich habe bereits einen privaten Schlüssel auf einem anderen Gerät. Wie kann ich den Schlüssel in Letterbox nutzen?</li>
-        </ol>
+        <div class="panel-group" id="otherDevices" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                                Ich habe einen Windows-Rechner. Kann ich auch meine E-Mails sicher übertragen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                                Ich habe eine Mac-Rechner.
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                                Ich habe eine Linux-Rechner.
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                                Wie bekomme ich mein Geheimnis (privaten Schlüssel) auf meine anderen Geräte?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                                Ich habe bereits einen privaten Schlüssel auf einem anderen Gerät. Wie kann ich den Schlüssel in Letterbox nutzen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         <h2>Ende-zu-Ende-Verschlüsselung</h2>
-        <ol>
-            <li>Welches Verschlüsselungsverfahren wird verwendet?</li>
-            <li>Was ist eine asymmetrische Verschlüsselung?</li>
-            <li>Was ist eine symmetrische Verschlüsselung?</li>
-            <li>Was sind digitale Signaturen?</li>
-            <li>Welche Eigenschaft hat eine verschlüsselte Nachricht?</li>
-            <li>Welche Eigenschaft hat eine signierte Nachricht?</li>
-            <li>Wo finde ich weitere Informationenzu dem Thema?</li>
-            <li>Welche anderen Programme unterstützen PGP?</li>
-        </ol>
-        
+         <div class="panel-group" id="e2eEnc" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingE2E">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseE2E" aria-expanded="false" aria-controls="collapseE2E">
+                                Wie funktioniert Ende-zu-Ende-Verschlüsselung?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseE2E" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingE2E">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEncSchemes">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseEncSchemes" aria-expanded="false" aria-controls="collapseEncSchemes">
+                                Welches Verschlüsselungsverfahren wird verwendet?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseEncSchemes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEncSchemes">
+                        <div class="panel-body">
+                            <p>Wir verwenden OpenPGP und unterstützen die etabilierten Verfahren asymmetrische Verfahren RSA und das symmemtrische Verfahren AES.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingAsymEnc">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseAsymEnc" aria-expanded="false" aria-controls="collapseAsymEnc">
+                                Was ist eine asymmetrische Verschlüsselung?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseAsymEnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAsymEnc">
+                        <div class="panel-body">
+                            <p>Bei asymmetrischer Verschlüsselung sind Verschlüsselung und Entschlüsselung voneinander getrennt. Wenn jemand eine Nachricht verschlüselt, kann diese Person nicht die Nachricht wieder entschlüsseln. Der Vorteil ist, dass eine Person nur ein Schloß (öffentlicher Schlüssel) benötigt und jeder kann das Schloß zum Verschlüsseln benutzen. Aber die empfangende Person hat den Schlüssel (privaten/geheimen Schlüssel) um das Schloß zu öffnen und so die Nachricht zu entschlüsseln. Ein bekanntes Verfahren hierzu ist zum Beispiel RSA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSymEnc">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseSymEnc" aria-expanded="false" aria-controls="collapseSymEnc">
+                                Was ist eine symmetrische Verschlüsselung?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSymEnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSymEnc">
+                        <div class="panel-body">
+                            <p>Bei einer symmetrischen Verschlüsselung ist die Entschlüsselung die Umkehrung der Verschlüsselung. Wenn eine Person die Nachricht verschlüsselt hat, kann diese Person auch automatisch die Nachricht wieder entschlüsseln. Es gibt hier nur einen gemeinsamen Schlüssel zur Verschlüsselung und Entschlüsselung. Der Nachteil ist, dass für jeden Kommunikationspartner ein Schlüssel ausgetauscht werden muss. Ansonsten könnte ein Kommunikationspartner die Nachrichten von anderen auch entschlüsseln.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSignature">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseSignature" aria-expanded="false" aria-controls="collapseSignature">
+                                Was sind digitale Signaturen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSignature" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSignature">
+                        <div class="panel-body">
+                            <p>Digitale Signaturen ermöglichen es nachzuweisen, dass die Nachricht nicht verändert wurde und die verfassende Person der Nachricht kann eindeutig nachgewiesen werden. Von der Nachricht wird eine Prüfsumme berechnet und die verfassende Person der Nachricht unterschreibt (signiert) diese mit einem privaten Schlüssel. Die empfangende Person kann nun die Prüfsumme über die empfangende Nachricht berechnen und diese mit der unterschriebenen Prüfsumme vergleichen. Außerdem wird überprüft (verifiziert), ob die  Unterschrift (digitale Signatur) zu dem bekannten Schloß zur Verschlüsselung (öffentlicher Schlüssel) der Person passt. Die digitale Signatur ist eine Art Umkehrung der asymmetrischen Verschlüsselung.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingProbEnc">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseProbEnc" aria-expanded="false" aria-controls="collapseProbEnc">
+                                Welche Eigenschaft hat eine verschlüsselte Nachricht?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseProbEnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProbEnc">
+                        <div class="panel-body">
+                            <p>Eine verschlüsselte Nachricht kann nur von verfassender Person und empfangenden Personen gelesen werden. Dritte, wie der E-Mail-Provider, andere Unternehmen und Staaten, können die den Inhalt der Nachricht nicht lesen. Sie können aber die Meta-Daten, wie zum Beispiel Absender, Epmfänger, Datum, ausspähen. Außerdem kann eine verschlüsselte E-Mail auch gefälscht werden, weil der Absender nicht eindeutig feststellbar ist. Dafür muss eine Nachricht zusätzlich signiert werden. Keine Sorge, bei uns ist ein Brief (sichere E-Mail) immer verschlüsselt und signiert.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingProbSig">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseProbSig" aria-expanded="false" aria-controls="collapseProbSig">
+                                Welche Eigenschaft hat eine signierte Nachricht?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseProbSig" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProbSig">
+                        <div class="panel-body">
+                            <p>Eine digital signierte Nachricht schützt vor Manipulation des Inhalts und weist die absendende Person nach. So kann eine Fälschung entdeckt werden. Allerdings ist Vorsicht bei fehlender digitaler Signatur oder einer neuen digitalen Signatur geboten. Dafür gibt es Hinweise in Letterbox. Eine digitale Signatur schützt nicht vor Ausspähungen von Dritten. Der E-Mail-Provider kann eine signierte Nachricht lesen. Deswegen ist ein Brief (sichere E-Mail) immer signiert und verschlüsselt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingMoreInfo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseMoreInfo" aria-expanded="false" aria-controls="collapseMoreInfo">
+                                Wo finde ich weitere Informationenzu dem Thema?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseMoreInfo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMoreInfo">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOther">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#e2eEnc" href="#collapseOther" aria-expanded="false" aria-controls="collapseOther">
+                                Welche anderen Programme unterstützen PGP?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOther" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOther">
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         <h2>Sichere E-Mails mit Bitcoin.de</h2>
-        <ol>
-            <li>Was muss ich tun um sicher mit Bitcoin.de zu kommunizieren?</li>
-            <li>Wie komme ich an meinen öffentlichen Schlüssel?</li>
-            <li>Wie hinterlege ich meinen öffentlichen Schlüssel?</li>
-            <li>Verschlüselt, signiert oder verschlüsselt und signiert? Wie soll ich meine E-Mails von Bitcoin.de empfangen?
-        </ol>        
+        <div class="panel-group" id="bitcoin.de" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingStartBitcoin">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bitcoin.de" href="#collapseStartBitcoin" aria-expanded="false" aria-controls="collapseStartBitcoin">
+                                Was muss ich tun um sicher mit Bitcoin.de zu kommunizieren?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseStartBitcoin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStartBitcoin">
+                        <div class="panel-body">
+                            <p>Sie müssen Ihr Schloß (öffentlichen Schlüssel) bei Bitcoin.de hinterlegen und dann die Verschlüsselung aktivieren. Um zu Ihren Schloß (öffentlicher Schlüssel) gelangen, klicken Sie auf ID in der Inbox. Anschließend befinden Sie sich in Iher Ablage und gehen weiter zu Schlüssel-Details. Nun klicken Sie auf Schloß kopieren. Das Schloß/öffentliche Schlüssel befindet sich nun in Ihrer Ablage. Unter Bitcoin.de Einstellungen und dann PGP-Verschlüsselung kopieren Sie bitten den Schlüssel ein und wählen verschlüsselt und signiert aus. Anschließend bestätigen Sie bitte die Änderung noch. Eine Detaillierte Antleitung finden Sie auch auf Bitcoinblog.de. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingWherePK">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bitcoin.de" href="#collapseWherePK" aria-expanded="false" aria-controls="collapseWherePK">
+                               Wie komme ich an mein Schloß (öffentlicher Schlüssel)? 
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWherePK" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingWherePK">
+                        <div class="panel-body">
+                            <p>Um zu Ihren Schloß (öffentlicher Schlüssel) gelangen, klicken Sie auf ID in der Inbox. Anschließend befinden Sie sich in Iher Ablage und gehen weiter zu Schlüssel-Details. Nun klicken Sie auf Schloß kopieren. Das Schloß/öffentliche Schlüssel befindet sich nun in Ihrer Ablage und kann auf Bitcoin.de kopiert werden.</p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingAddPK">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bitcoin.de" href="#collapseAddPK" aria-expanded="false" aria-controls="collapseAddPK">
+                                Wie hinterlege ich meinen Schloß (öffentlichen Schlüssel) auf Bitcoin.de?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseAddPK" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAddPK">
+                        <div class="panel-body">
+                            <p>Unter Bitcoin.de Einstellungen und dann PGP-Verschlüsselung kopieren Sie bitten den Schlüssel ein und wählen verschlüsselt und signiert aus. Anschließend bestätigen Sie bitte die Änderung noch. Eine Detaillierte Antleitung finden Sie auch auf Bitcoinblog.de. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSigOrEnc">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bitcoin.de" href="#collapseSigOrEnc" aria-expanded="false" aria-controls="collapseSigOrEnc">
+                                Verschlüsselt, signiert oder verschlüsselt und signiert? Wie soll ich meine E-Mails von Bitcoin.de empfangen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSigOrEnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSigOrEnc">
+                        <div class="panel-body">
+                            <p>Bitte wähle Sie verschlüsselt und signiert aus. Nur das sind Briefe.</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>   
         <h2>Anmeldung/Registrierung</h2>
-        <ol>
-            <li>Ich habe den Fragebogen ausgefüllt. Was passiert nun?</li>
-            <li>Ich habe mich bei HockeyApp registriert. Was passiert nun?</li>
-        </ol>
+        <div class="panel-group" id="enlisting" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingQuestionaire">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#enlisting" href="#collapseQuestionaire" aria-expanded="false" aria-controls="collapseQuestionaire">
+                                Ich habe den Fragebogen ausgefüllt. Was passiert nun?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseQuestionaire" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuestionaire">
+                        <div class="panel-body">
+                            <p>Bitte haben Sie etwas Geduld. Sie erhalten eine Einladung per E-Mail von uns. Dieser können Sie folgen und Letterbox dann installieren.</p>
+                            <!--<li>Ich habe mich bei HockeyApp registriert. Was passiert nun?</li>-->
+                        </div>
+                    </div>
+                </div>
+            </div> 
         <h2>Während der Teilnahme</h2>
-        <ol>
-            <li>Ich habe noch keinen Brief bekommen. Warum ist das so?</li>
-            <li>Wieso kann ich meine Briefe nicht auf anderen Geräten lesen.</li>
-            <li>Ich habe eine merkwürdige/fragwürdige/bösartige E-Mail bekommen. Haben Sie diese versendet?</li>
-            <li>Ich habe die App einmal neuinstalliert und nun kann ich einige E-Mails nicht mehr lesen. Was nun?</li>
-        </ol>
-        <h2>Beendigung der Teilnahme</h2>
-        <ol>
-            <li>Ich möchte nicht mehr teilnehmen. Was muss ich beachten?</li>
-        </ol>
-        
+        <div class="panel-group" id="duringStudy" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNoLetters">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#duringStudy" href="#collapseNoLetters" aria-expanded="false" aria-controls="collapseNoLetters">
+                                Ich habe noch keinen Brief bekommen. Warum ist das so?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseNoLetters" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNoLetters">
+                        <div class="panel-body">
+                            <p>Ein Brief erfordert die Kooperation des Gegenübers. Bitte Sie einfach Personen mitzumachen und laden Sie diese ein. Es wäre vorteilhaft, wenn diese auch iOS nutzen, aber für andere Geräte steht Ende-Zu-Ende-Verschlüsselung auch zur Verfügung. Alternativ können Sie auch einfach unseren E-Mail-Bot nutzen.</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNoDevicesStudy">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#duringStudy" href="#collapseNoDevicesStudy" aria-expanded="false" aria-controls="collapseNoDevicesStudy">
+                                Wieso kann ich meine Briefe nicht auf anderen Geräten lesen.
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseNoDevicesStudy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNoDevicesStudy">
+                        <div class="panel-body">
+                            <p>Briefe können nur mit einem Geheimnis (privater/geheimer Schlüssel) entschlüsselt und lesbar gemacht werden. Anfangs ist dieses Geheimnis nur auf Ihrem iPhone. Sie können das Geheimnis auch auf andere Geräte übertragen. Bitte beachten Sie hierzu folgenden Hinweis.</p> <!-- Verweis auf andere FAQ!-->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingMysteryMail">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#duringStudy" href="#collapseMysteryMail" aria-expanded="false" aria-controls="collapseMysteryMail">
+                                Ich habe eine merkwürdige/fragwürdige/bösartige E-Mail bekommen. Haben Sie diese versendet?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseMysteryMail" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMysteryMail">
+                        <div class="panel-body">
+                            <p>Das muss nicht unbedingt sein. Bitte behandeln Sie diese E-Mail, wie eine übliche merkwürdige/fragwürdige oder bösartige E-Mail und völlig unabhängig davon, ob wir oder jemand anders diese E-Mail versendet hat. Wir werden Sie zu einem späteren Zeitpunkt aufklären, welche E-Mails wir Ihnen zu gesendet haben. Die Aufklärung erfolgt mittels eines Briefs von letterbox@fu-berlin.de</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingReInstall">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#duringStudy" href="#collapseReInstall" aria-expanded="false" aria-controls="collapseReInstall">
+                                Ich habe die App einmal neuinstalliert und nun kann ich einige E-Mails nicht mehr lesen. Was nun?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseReInstall" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingReInstall">
+                        <div class="panel-body">
+                            <p>Durch die Neuinstallation wurde ein neues Geheimnis erzeugt und das alter gelöscht. Falls Sie vorher das Geheimnis auf ein anderes Gerät übertragen haben, können Sie es wieder zurück übertragen. Beachten Sie dazu bitte folgenden Hinweis. Alternativ können Sie die empfangenden Person bitten Ihnen die E-Mail zu senden.  Falls Sie Fragen oder Hilfe benötigen, kontaktieren Sie uns bitte unter: letterbox@fu-berlin.de </p> <!-- Verweis in FAQ! -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingStop">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#duringStudy" href="#collapseStop" aria-expanded="false" aria-controls="collapseStop">
+                                Ich möchte nicht mehr teilnehmen. Was muss ich beachten?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseStop" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStop">
+                        <div class="panel-body">
+                            <p>Falls Sie nicht mehr teilnehmen möchten, aber bereits Briefe versendet oder empfangen haben, sollten Sie unbedingt Ihr Geheimnis auf ein andere Gerät übertragen. Ansonsten werden diese Briefe nicht mehr lesbar für Sie sein. Beachten Sie dazu folgenden Hinweis. Wir sind interessiert daran zu erfahren, warum Sie die App nicht mehr nutzen wollen. Falls Sie Fragen  haben, Hilfe benötigen oder uns ein Feedback geben wollen, kontaktieren Sie uns bitte unter: letterbox@fu-berlin.de</p> <!-- Verweis auf FAQ! -->  
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        <!--
         <h2>HockeyApp</h2>
         <ol>
             <li>Was ist HockeyApp?</li>
@@ -217,20 +808,144 @@
             <li>Warum wird HockeyApp benötigt?</li>
             <li>Welche Daten werden dort erhoben, verarbeitet und gespeichert?</li>
         </ol>
+        -->
         <h2>Gefahren</h2>
-        <ol>
-            <li>Welche Gefahren bestehen bei Ende-zu-Ende-Verschlüsselung?</li>
-            <li>Ist mein Passwort sicher?</li>
-            <li>Wie kann ich mich dagegen schützen mein Geheimnis (privaten Schlüssel) zu verlieren?</li>
-        </ol>
+        <div class="panel-group" id="hazards" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingListHarzards">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#hazards" href="#collapseListHarzards" aria-expanded="false" aria-controls="collapseListHarzards">
+                                Welche Gefahren bestehen bei der Teilnahme
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseListHarzards" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingListHarzards">
+                        <div class="panel-body">
+                            <p>Jede Nutzung von Smartphones und dem Internet bestehen auch bei Letterbox und der Studie einige Gefahren. Die Gefahren gliedern sich auf die Nutzung von Ende-zu-Ende-Verschlüsselung, Letterbox und dem Studiendesign.</p>
+                            <p>Bei Ende-zu-Ende-Verschlüsselung besteht die Gefahr, dass durch Verlust des Geheimnisses E-Mails nicht mehr lesbar sind. Darum ist es hilfreich das Geheimnis (privaten/geheimen Schlüssel) auf ein andere Gerät zu übertragen. Außerdem sollte die empfangende Person auch eine Kopie der E-Mail von Ihnen haben und diese Ihnen notfalls wieder zur Verfügung stellen. Andere Gefahren bestehen bei Ende-Zu-Ende-Verschlüsselung nicht. Die Vorteile dafür sind ein besserer Schutz der Privatsphäre.</p>
+                            <p>Die App ist ein Demonstrator für Forschungszwecke und vergleichbar mit einer Software im Beta-Zustand. Die Software kann Fehler beinhalten. Allerdings werden zur Kommunikation zu Ihrem E-Mail-Provider die Open-Source-Bibliothek Mailcore eingesetzt. Diese wurde bereits in vielen anderen E-Mail-Clients eingesetzt und wird stetig weiterentwickelt. Zur Ende-zu-Ende-Verschlüsselung wird die Open-Source-Bibliothek ObjectivePGP verwendet. Diese wird auch von anderen E-Mail-Clients verwendet und stetig weiterentwickelt. Passwörter und Schlüssel werden in der KeyChain von iOS aufbewahrt und außerhalb des Gerätes von uns nicht gespeichert. Wir folgen hier den Apple-Security-Guidelines. Die Daten werden mittels CoreDaten, welches von Apple bereitgestellt wird, auf Ihrem Gerät gespeichert. Während der Entwicklung haben wir die Apple-Guidelines beachtet und versucht die Gefahren zu minimieren. Die App wurde vorher bereits in Laborstudien untersucht.</p>
+                            <p>Wir versuchen möglichst nicht in Ihren Alltag einzugreifen und minimieren die Gefahren. Die Nutzung von Ende-zu-Ende-Verschlüsselung mit Bitcoin.de erhöht nur Ihre Sicherheit und ist mit keinen zusätzlichen Gefahren verbunden. Wir senden Ihren allerdings fragwürdige/seltsame E-Mails zu. Mit diesen E-Mails möchten wir untersuchen, ob Letterbox Ihnen hilft Phishing-Angriffe zu erkennen und zu bekämpfen. Wir möchten Sie auf eine von uns gefälschte Bitcoin-Seite weiterleiten. Diese Seite ist nicht bösartig und Passwörter werden nicht erfasst. Es ist nur eine Kopie der original Seite und bei Eingabe des Passworts bricht das Experiment ab. Bitte beachten Sie, dass auch andere Versuchen könnten Sie anzugreifen. Darum behandeln Sie alle fragwürdigen/bösartigen/seltsamen E-Mails gleich und trauen Sie diesen nicht!</p>
+                            <p>Während des Expierments werden Daten für wissenschaftliche Zwecke über Nutzung der App erhoben. Wir möchtend damit verstehen, wie E-Mail-Verschlüsselung genutzt wird und welche Probelme entstehen. Wir erheben keine Passwörter, E-Mail-Addressen, Inhaltsdaten oder Namen. Alle erhoben Daten werden nach Möglichkeit anonymisiert oder notfalls pseudonymisiert. Eine genaue Auflistung finden sie hier. Die Daten werden verschlüsselt an einen Server der Freien Universität Berlin übertragen und nur auf Rechnern der Freien Universität Berlin analysiert. Auf die Daten haben nur berechtigte Mitarbeiterinnen und Mitarbeiter der Freien Universität Berlin Zugriff. Die Projektpartner erhalten keinen Zugriff. Die Daten werden ausschließlich für wissenschaftliche Zwecke verwendet. Eine Veröffentlichung erfolgt nur von anonymisierten Daten.</p> <!-- Verweis FAQ -->
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingHarzardEnc">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#hazards" href="#collapseHarzardEnc" aria-expanded="false" aria-controls="collapseHarzardEnc">
+                                Welche Gefahren bestehen bei Ende-zu-Ende-Verschlüsselung?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseHarzardEnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingHarzardEnc">
+                        <div class="panel-body">
+                            <p>Bei Ende-zu-Ende-Verschlüsselung besteht die Gefahr, dass durch Verlust des Geheimnisses E-Mails nicht mehr lesbar sind. Darum ist es hilfreich das Geheimnis (privaten/geheimen Schlüssel) auf ein andere Gerät zu übertragen. Außerdem sollte die empfangende Person auch eine Kopie der E-Mail von Ihnen haben und diese Ihnen notfalls wieder zur Verfügung stellen. Andere Gefahren bestehen bei Ende-Zu-Ende-Verschlüsselung nicht. Die Vorteile dafür sind ein besserer Schutz der Privatsphäre.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingPw">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#hazards" href="#collapsePw" aria-expanded="false" aria-controls="collapsePw">
+                                Ist mein Passwort sicher?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePw" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPw">
+                        <div class="panel-body">
+                            <p>Ihre Passwörter und Schlüssel werden in der Keychain von iOS gespeichert und wir speichern diese nur auf Ihrem Gerät. Sie verlassen nur, wenn es absolut nötig ist (zum Beispiel zur Authentifizierung gegenüber dem Mailprovider) das Gerät. Wir folgen Ihr den Apple-Security-Guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSK">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#hazards" href="#collapseSK" aria-expanded="false" aria-controls="collapseSK">
+                                Wie kann ich mich dagegen schützen mein Geheimnis (privaten Schlüssel) zu verlieren?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSK" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSK">
+                        <div class="panel-body">
+                            <p>Hinterlegen Sie den Schlüssel auf einem anderen Gerät und schreiben Sie sich den Sicherheitscode, der bei dem Prozess angezeigt wird auf. Diesen können Sie dann sicher aufbewahren. Bitte beachten Sie folgenden Hinweis dazu. Im Ordner Letterbox-Study können Sie einsehen die erhobenen Daten einsehen.</p> <!-- Verweis auf anderne FAQ Punkt -->
+                        </div>
+                    </div>
+                </div>
+            </div> 
         <h2>Datenschutz</h2>
-        <ol>
-            <li>Welche Daten werden erhoben?</li>
-            <li>Wo werden die Daten gespeichert?</li>
-            <li>Wie werden die Daten übertragen?</li>
-            <li>Was passiert mit den Daten?</li>
-            <li>Wer hat Zugriff auf die Daten?</li>
-        </ol>
+        <div class="panel-group" id="privacy" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingCollecting">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#privacy" href="#collapseCollecting" aria-expanded="false" aria-controls="collapseCollecting">
+                                Welche Daten werden erhoben?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseCollecting" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCollecting">
+                        <div class="panel-body">
+                            <p>TODO: JAKOB
+                                Bitte beachten Sie noch die Datenschutzrichtlinen von Apple.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingStorage">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#privacy" href="#collapseStorage" aria-expanded="false" aria-controls="collapseStorage">
+                                Wo werden die Daten gespeichert?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseStorage" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingStorage">
+                        <div class="panel-body">
+                            <p>Die Daten werden zunächst auf dem Gerät gespeichert und im Verlauf der Studie übertrage. Anschließend werden die Daten verschlüsselt auf einem Server der Freie Universität Berlin gespeichert. Die Analyse der Daten erfolgt von einem Rechner der Freien Universität Berlin. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTransfer">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#privacy" href="#collapseTransfer" aria-expanded="false" aria-controls="collapseTransfer">
+                                Wie werden die Daten übertragen?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTransfer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTransfer">
+                        <div class="panel-body">
+                            <p>Die Daten werden mittels eine Ende-zu-Ende-verschlüsselten E-Mail (OpenPGP) an die Freie Universität Berlin versendet. Das Geheimnis zur Entschlüsselung liegt nur auf wenigen Rechnern der Freien Universität Berlin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingUsage">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#privacy" href="#collapseUsage" aria-expanded="false" aria-controls="collapseUsage">
+                                Was passiert mit den Daten?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseUsage" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingUsage">
+                        <div class="panel-body">
+                            <p>Die Daten werden gesammelt und für wissenschaftliche Zwecke analysiert. Wir möchten herausfinden, ob Letterbox Ende-Zu-Ende-Verschlüsselung einfach und benutzbar unterstützt, welche Rahmenbedingungen es in der Praxis gibt und ob Letterbox vor Angriffen schützen kann. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingAccess">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#privacy" href="#collapseAccess" aria-expanded="false" aria-controls="collapseAccess">
+                                Wer hat Zugriff auf die Daten?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseAccess" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAccess">
+                        <div class="panel-body">
+                            <p>Auf die Daten haben nur berechtigete Mitarbeiterinnen und Mitarbeiter der AG Sichere Identität an der Freien Universität Berlin Zugriff. Mitarbeiterinnen und Mitarbeiter der Projektpartner sind explizit ausgeschlossen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
     </div>
     
 </body>
