@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Enzevalos-App</title>
+    <title>Letterbox-App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -34,18 +33,12 @@
             </div>
         </div>
     </nav>
-    <div></div>
-    
-    <div id="home" class="header container-fluid">
-        <div class="header-container">
-            <div class="caption-center">
-                <h1><p>Studie über verschlüsselte E-Mail</p></h1>
-                <h5><p>FU-Berlin</p></h5> <!-- TODO: LOGO! -->
-            </div>
-        </div>
+    <div class="pic">
+        <h1><p>Studie über <br> verschlüsselte E-Mail</p></h1>
+        <img width="100%" src="../rsc/title_enzevalos.jpg">
+
         
     </div>
-    
     <div id="study" class="motivation section-container">
         <h1>Studie</h1>
         <p>
@@ -53,11 +46,10 @@
         <p>
         <p>Was müssen Sie tun?<p>
         <ul>
-            <li>Beantworten Sie einen Eingangsfragebogen und registrieren Sie sich.</li>
+            <li><a href="#register">Registrieren</a> Sie sich und beantworten Sie einen Eingangsfragebogen.</li>
             <li>Nach Einrichtung nutzen Sie einfach unseren Client für iOS im Alltag. Fertig!</li>
             <li>Beantworten Sie einen Abschlussfragebogen.</li>
-        </ul>
-        
+        </ul>    
         <p>Was tun wir?<p>
         <ul>
             <li>Wir bieten Ihnen einen E-Mail-Client für eine sichere Kommunikation.</li>
@@ -68,36 +60,31 @@
         <p> Übrigens: Sie können auch Freunde oder Bekannte zum Mitmachen einladen und mit Ihnen künfigt sicher zu kommunizieren. </p>
         <p>Mit <a href="https://www.bitcoin.de/de/userprofile/pgp">Bitcoin.de</a> ist eine sichere Kommunikation auch möglich. Mehr dazu finden Sie auf <a href="https://bitcoinblog.de/2014/05/15/automatisierte-mails-von-bitcoin-de-auf-wunsch-signiert-und-verschlusselt/">Bitcoinblog.de</a>.<p>
      </div>
-    <div class="dark process section-container">
+    <div class="dark process section-container" id="register">
         <h1>Registrierung</h1>
         <p>
             Wenn Sie unsere E-Mail App ausprobieren möchten und an der Studie teilnehmen möchten, registrieren Sie sich mit Ihrer E-Mail-Adresse, welche Sie später in der E-Mail App verwenden möchten. <br>Sie erhalten dann per E-Mail einen kurzen Fragebogen und eine Einladung zur App.
         </p>
-        <form action="https://userpage.fu-berlin.de/wieseoli/letterbox/register.php">
+        <form action="https://userpage.fu-berlin.de/wieseoli/letterbox/register.php" onsubmit="alert('Vielen Dank für die Anmeldung! Wir werden uns bei Ihnen in Kürze per E-Mail melden.'); return false">
             <div>
                 <label for="email">E-Mail-Adresse: <span>*</span></label>
-                <input type="email" id="email" name="subscriber_email" placeholder="E-Mail-Adresse" maxlength="255" required>
+                <input type="text" id="email" name="email" style="background:rgba(255,255,255,0.1)"  placeholder="E-Mail-Adresse" maxlength="255" required>
             </div>
             <div>
-                <label><input type="checkbox" id="terms" name="terms" value="1" required>Ich habe den <a href="#process" title="Studiendetails" target="_blank">Studiendetails</a> und die <a href="#privacy" title="Datenschutzerklärung" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiert. <span class="form-required-field">*</span></label>            
+                <label><input type="checkbox" id="terms" name="terms" value="1" required> Ich habe den <a href="#process" title="Studiendetails" target="">Studiendetails</a> und die <a href="#privacy" title="Datenschutzerklärung" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere sie. <span class="form-required-field">*</span></label>            
             </div>       
-            <button class="btn btn-primary" type="submit" formmethod="post">Anmelden</button>
+            <button class="btn btn-primary" type="submit" formmethod="post" >Anmelden</button>
             <div>
                 <label>* Pflichtfeld</label>
             </div>
         </form>
-    <!-- $.post("http://page.mi.fu-berlin.de/wieseoli/enzevalos/register.php", "hello", function(data, status){
-                                               alert("Vielen Dank für die Teilnahme!");
-                                               });
-     <a href="https://userpage.fu-berlin.de/wieseoli/letterbox/" class="btn btn-primary" role="button">Weiter zur Anmeldung</a>
--->
     </div>
     
     <div id="process" class="motivation section-container">
         <h1>Studiendetails</h1>
         <h2>Ablauf</h2>
         <ol>
-            <li>Nehmen Sie am Eingangsfragebogen teil. <a href="https://userpage.fu-berlin.de/wieseoli/letterbox/"> Hier geht es zur Anmeldung.</a></li>
+            <li><a href="#register">Registieren</a> Sie sich und nehmen Sie anschließend am Eingangsfragebogen teil. </li>
             <li>Installieren Sie <a href="https://itunes.apple.com/us/app/testflight/id899247664?mt=8">Testflight</a> von Apple aus dem AppStore.</li>
             <li>Installieren Sie sich bitte unsere App. Hierzu erhalten Sie wieder eine E-Mail.</li>
             <li>Richten Sie die App mit Ihrem E-Mail-Account ein.</li>
@@ -132,7 +119,7 @@
     <div id="about" class="motivation section-container">
         <h1>Über</h1>
         <p>
-        Die Studie ist Teil des Forschungsprojekts <a href="https://www.enzevalos.de/">Enzevalos</a> und hat das Ziel Ende-zu-Ende-Verschlüsselung für E-Mail zu untersuchen. Enzevalos wird vom Bundesministerium für die Bildung und Forschung gefördert und Projektpartner sind Freie Universität Berlin, die Technische Universität Berlin und Wincor-Nixdorf International GmbH. Bitcoin Deutschland AG, Open-Xchange AG, Peering GmbH (ECIX) und Mynigma unterstützen das Projekt als assoziierte Partner. Das Projekt begann im Januar 2016 und endet im März 2018.
+        Die Studie ist Teil des Forschungsprojekts <a href="https://www.enzevalos.de/">Enzevalos</a> und hat das Ziel Ende-zu-Ende-Verschlüsselung für E-Mail zu untersuchen. Enzevalos wird vom Bundesministerium für die Bildung und Forschung (<a href="https://www.forschung-it-sicherheit-kommunikationssysteme.de/projekte/enzevalos">BMBF</a>) gefördert und Projektpartner sind <a href="http://www.fu-berlin.de/">Freie Universität Berlin</a>, die <a href="http://www.tu-berlin.de/">Technische Universität Berlin</a> und <a href="DieboldNixdorf.com">Wincor-Nixdorf International GmbH</a>. Bitcoin Deutschland AG, Open-Xchange AG, Peering GmbH (ECIX) und Mynigma unterstützen das Projekt als assoziierte Partner. Das Projekt begann im Januar 2016 und endet im März 2018.
         </p>
     </div>
     
@@ -157,17 +144,12 @@
                     <li>Benötigt Beteiligung von Sender und Empfänger. Dafür können in der App Kontakte eingeladen werden.</li>
                 </ul>
             </div>
-            <div align="center" class="col-md-4 hidden-sm"> <!--class="col-md-4 hidden-sm">-->
-                <!--
-                <div class="app-screenshot">
-                    <img src="../rsc/app_screenshot.png"/>
-                </div>
-                -->
-                <!--- <object class="embed-responsive-item">
+            <div align="center" class="col-md-4"> 
+                 <object class="embed-responsive-item">
                     <video autoplay loop class="embed-responsive-item">
-                        <source src="../rsc/letterbox_de.mov" type="video/mov">
+                        <source src="../rsc/letterbox_de.mp4" type="video/mp4">
                      </video>
-                </object> -->
+                </object> 
             </div>
         </div>
     </div>
@@ -556,7 +538,7 @@
                                 Für eine Einführung in Ende-zu-Ende-Verschlüsselung können wir Ihnen folgende Videos empfehlen:
                             </p>
                             <ul>
-                                <li><a href="https://vimeo.com/17610424"></a>Ein deutschsprachiges Video auf Vimeo</li>
+                                <li><a href="https://vimeo.com/17610424">Ein deutschsprachiges Video auf Vimeo</a></li>
                                 <li><a href="https://youtu.be/inxNRA4xK1Q">Ein deutschsprachiges Video von Mailbox.org auf Youtube</a></li>
                             </ul>
                             Weitere Erklärungen über Ende-Zu-Ende-Verschlüsselung gibt es auch auf <a href="https://de.wikipedia.org/wiki/Pretty_Good_Privacy">Wikipedia</a>.

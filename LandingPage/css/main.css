@@ -4,11 +4,25 @@
 }
 
 
+.pic {
+    position: relative;
+}
+
+.pic h1 {
+    position: absolute;
+    top: 1em;
+    color: #fff;
+    background-color:#fff;
+    background-color:rgba(0,0,0,0.5);
+    padding-left:10%;
+    padding-right:1em;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #3d3d3d;
-    color: #fff;
+    background-color: #ffffff;
+    color: #ff0000;
 }
 
 .navbar-inverse .navbar-nav .active a, 
