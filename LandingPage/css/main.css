@@ -21,7 +21,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: #ffffff;
+    background-color: #3d3d3d;
     color: #ff0000;
 }
 
@@ -87,4 +87,16 @@
 
 .app-screenshot img {
     height: 480px;
+}
+
+.flex-container {
+    display: flex;
+    padding-bottom: 26pt;
+    max-height: 150px;
+    align-items: center;
+    flex: auto;
+}
+
+.flex-item{
+    margin: 5px
 }
