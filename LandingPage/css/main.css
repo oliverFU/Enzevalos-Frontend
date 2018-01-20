@@ -1,14 +1,28 @@
+.section-container ol li,
+.section-container ul li {
+    font-size: 12pt;
+}
 
-ol li,
-ul li {
-    font-size: 14pt;
+
+.pic {
+    position: relative;
+}
+
+.pic h1 {
+    position: absolute;
+    top: 1em;
+    color: #fff;
+    background-color:#fff;
+    background-color:rgba(0,0,0,0.5);
+    padding-left:10%;
+    padding-right:1em;
 }
 
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
     background-color: #3d3d3d;
-    color: #fff;
+    color: #ff0000;
 }
 
 .navbar-inverse .navbar-nav .active a, 
@@ -37,8 +51,13 @@ ul li {
     padding-bottom: 26pt;
 }
 
+.faq-container {
+    padding: 16pt;
+    padding-bottom: 26pt;
+}
+
 .about p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .dark {
@@ -50,18 +69,34 @@ ul li {
     color: #f39c12
 }
 
+.dark p{
+    font-size: 12pt;
+}
+
 .app p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .motivation p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .goals p {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .app-screenshot img {
     height: 480px;
+}
+
+.flex-container {
+    display: flex;
+    padding-bottom: 26pt;
+    max-height: 150px;
+    align-items: center;
+    flex: auto;
+}
+
+.flex-item{
+    margin: 5px
 }
