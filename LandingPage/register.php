@@ -1,6 +1,6 @@
 <?php
     $str =$_POST ;
-    file_put_contents('../../data-rw/'.uniqid().'.txt',$str);
+    file_put_contents('../../data-rw/registration/'.uniqid().'.txt',$str);
     
     ?>
 <!DOCTYPE html>
