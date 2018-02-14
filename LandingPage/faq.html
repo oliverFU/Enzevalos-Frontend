@@ -35,6 +35,25 @@
         <h1>Häufige Fragen</h1>
         <h2>Unsere App: Letterbox</h2>
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingNoLogin">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#answerNoLogin" aria-expanded="false" aria-controls="answerNoLogin">
+                                Warum kann ich mich nicht anmelden?
+                        </a>
+                    </h4>
+                </div>
+                <div id="answerNoLogin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNoLogin">
+                    <div class="panel-body">
+                          <p>
+                              Falls Google Ihr E-Mail-Provider ist, beachten Sie bitte den besonderen Zugang über <q>Login with Google</q>. Dies ist notwenidg, weil eine Anmeldung mti einem Passwort bei der Nutzung einer MailApp nicht ausreicht. Anschließend werden Sie zu Google weitergeleitet und müssen Letterbox den Zugriff auf Ihren E-Mail-Account gestatten.
+                            </p>
+                        <p>
+                            Falls Sie keinen Google-Account haben und sich nicht einloggen können, prüfen Sie bitte die speziellen Einstellungen von Ihrem Provider und prüfen Sie bitte, ob Sie Einstellungen bei Ihrem E-Mail-Provider vornehmen müssen. Zum Beispiel muss bei <a href="https://hilfe.web.de/email/einstellungen/pop3-imap-einschalten.html">Web.de</a> externe Programme freischalten.
+                        </p>
+                    </div>
+                </div>
+            </div>
                  <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingCrypto">
                     <h4 class="panel-title">
@@ -177,7 +196,7 @@
                     </div>
                     <div id="collapseKeyDetails" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingKeyDetails">
                         <div class="panel-body">
-                            <p>Das Gerät erzeugt einen <a href="#headingE2E"> (geheimen/privaten) Schlüssel und ein Schloss (öffentlicher Schlüssel)</a> für Sie. Mit dem geheimen Schlüssel können Nachrichten entschlüsselt werden und mit dem Schloss verschlüsselt werden. In der Detail-Ansicht finden Sie einige Informationen, wie zum Beispiel wann dieser hinzufgeügt wurde, zu dem Schloss. Wenn Sie Ihr eigenes Schloss betrachten, können Sie dieses auch kopieren.</p>
+                            <p>Das Gerät erzeugt einen <a href="#headingE2E"> (geheimen/privaten) Schlüssel und ein Schloss (öffentlicher Schlüssel)</a> für Sie. Mit dem geheimen Schlüssel können Nachrichten entschlüsselt werden und mit dem Schloss verschlüsselt werden. In der Detail-Ansicht finden Sie einige Informationen, wie zum Beispiel wann dieser hinzugefügt wurde, zu dem Schloss. Wenn Sie Ihr eigenes Schloss betrachten, können Sie dieses auch kopieren.</p>
                         </div>
                     </div>
                 </div>
@@ -348,72 +367,98 @@
         <h2>Andere Geräte</h2>
         <div class="panel-group" id="otherDevices" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading">
+                    <div class="panel-heading" role="tab" id="headingWin">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapseWin" aria-expanded="false" aria-controls="collapse">
                                 Ich habe einen Windows-Rechner. Wie kann ich Briefe auf Windows lesen und verfassen?
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div id="collapseWin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
                         <div class="panel-body">
-                            
+                            <p>
+                                Wir empfehlen Ihnen die Verwendung von <a href="https://www.mozilla.org/de/thunderbird/">Thunderbird</a> und <a href="https://www.enigmail.net/index.php/en/">Enigmail</a> als Addon für Thunderbird. Außerdem wird noch <a href="https://gpg4win.org/index-de.html">GPG</a> benötigt.
+                            </p>                                           
+                            <p>
+                                Eine gute Schritt für Schritt Erklärung wird von der <a href="https://ssd.eff.org/en/module/how-use-pgp-windows">ELECTRONIC FRONTIER FOUNDATION</a> bereitgestellt.
+                            </p>
+                            <p>
+                                Anschließend können Sie Ihren Schlüssel vom iPhone kopieren. Klicken Sie auf <q>ID</q> in der Inbox. Anschließend befinden Sie sich in Ihrer Ablage. Klicken Sie nun auf <q>E-Mails auf einem anderen Gerät lesen</q>. Folgen Sie den Anweisungen. Zum Beispiel können Sie in einem Ordner ablegen. Ihr (geheimer/privater) Schlüssel wurde verschlüsselt in Ihrer Inbox abelegt. Öffnen Sie diese E-Mail nun mit Thunderbird. Sie werden aufgefordert ein Passwort einzugeben. Geben Sie dafür den Sicherheitscode ein. Die Bindestriche gehören zum Sicherheitscode. Nun wird Ihnen ein Text angezeigt. Markieren Sie den Abschnitt von der Zeile BEGIN PGP bis zur Zeile END PGP und kopieren Sie diesen in die Zwischenablage. Dies ist hier geheimer Schlüssel. Fügen Sie diesen anschließend ihrem GPG Keychain ein.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading">
+                    <div class="panel-heading" role="tab" id="headingMac">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapseMac" aria-expanded="false" aria-controls="collapse">
                                 Ich habe eine Mac-Rechner.
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div id="collapseMac" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
                         <div class="panel-body">
-                            
+                           <p>
+                                Wir empfehlen Ihnen die Verwendung von <a href="https://www.mozilla.org/de/thunderbird/">Thunderbird</a> und <a href="https://www.enigmail.net/index.php/en/">Enigmail</a> als Addon für Thunderbird. Außerdem wird noch <a href="https://www.gnupg.org/index.html">GPG</a> benötigt.
+                            </p>                                           
+                            <p>
+                                Eine gute Schritt für Schritt Erklärung wird von der <a href="https://ssd.eff.org/en/module/how-use-pgp-mac-os-x">ELECTRONIC FRONTIER FOUNDATION</a> bereitgestellt.
+                            </p>
+                            <p>
+                                Anschließend können Sie Ihren Schlüssel vom iPhone kopieren. Klicken Sie auf <q>ID</q> in der Inbox. Anschließend befinden Sie sich in Ihrer Ablage. Klicken Sie nun auf <q>E-Mails auf einem anderen Gerät lesen</q>. Folgen Sie den Anweisungen. Zum Beispiel können Sie in einem Ordner ablegen. Ihr (geheimer/privater) Schlüssel wurde verschlüsselt in Ihrer Inbox abelegt. Öffnen Sie diese E-Mail nun mit Thunderbird. Sie werden aufgefordert ein Passwort einzugeben. Geben Sie dafür den Sicherheitscode ein. Die Bindestriche gehören zum Sicherheitscode. Nun wird Ihnen ein Text angezeigt. Markieren Sie den Abschnitt von der Zeile BEGIN PGP bis zur Zeile END PGP und kopieren Sie diesen in die Zwischenablage. Dies ist hier geheimer Schlüssel. Fügen Sie diesen anschließend ihrem GPG Keychain ein.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading">
+                    <div class="panel-heading" role="tab" id="headingLinux">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapseLinux" aria-expanded="false" aria-controls="collapse">
                                 Ich habe eine Linux-Rechner.
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div id="collapseLinux" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
                         <div class="panel-body">
-                            
+                            <p>
+                                Wir empfehlen Ihnen die Verwendung von <a href="https://www.mozilla.org/de/thunderbird/">Thunderbird</a> und <a href="https://www.enigmail.net/index.php/en/">Enigmail</a> als Addon für Thunderbird. Außerdem wird noch <a href="https://www.gnupg.org/index.html">GPG</a> benötigt.
+                            </p>                                           
+                            <p>
+                                Eine gute Schritt für Schritt Erklärung wird von der <a href="https://ssd.eff.org/en/module/how-use-pgp-mac-os-x">ELECTRONIC FRONTIER FOUNDATION</a> bereitgestellt.
+                            </p>
+                            <p>
+                                Anschließend können Sie Ihren Schlüssel vom iPhone kopieren. Klicken Sie auf <q>ID</q> in der Inbox. Anschließend befinden Sie sich in Ihrer Ablage. Klicken Sie nun auf <q>E-Mails auf einem anderen Gerät lesen</q>. Folgen Sie den Anweisungen. Zum Beispiel können Sie in einem Ordner ablegen. Ihr (geheimer/privater) Schlüssel wurde verschlüsselt in Ihrer Inbox abelegt. Öffnen Sie diese E-Mail nun mit Thunderbird. Sie werden aufgefordert ein Passwort einzugeben. Geben Sie dafür den Sicherheitscode ein. Die Bindestriche gehören zum Sicherheitscode. Nun wird Ihnen ein Text angezeigt. Markieren Sie den Abschnitt von der Zeile BEGIN PGP bis zur Zeile END PGP und kopieren Sie diesen in die Zwischenablage. Dies ist hier geheimer Schlüssel. Fügen Sie diesen anschließend ihrem GPG Keychain ein.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading">
+                    <div class="panel-heading" role="tab" id="headingExport">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapseExport" aria-expanded="false" aria-controls="collapse">
                                 Wie bekomme ich meinen geheimen Schlüssel auf meine anderen Geräte?
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div id="collapseExport" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
                         <div class="panel-body">
-                            
+                            Öffnen Sie Letterbox. Klicken Sie auf <q>ID</q> in der Inbox. Anschließend befinden Sie sich in Ihrer Ablage. Klicken Sie nun auf <q>E-Mails auf einem anderen Gerät lesen</q>. Folgen Sie den Anweisungen. Zum Beispiel können Sie in einem Ordner ablegen. Ihr (geheimer/privater) Schlüssel wurde verschlüsselt in Ihrer Inbox abelegt. Öffnen Sie diese E-Mail nun mit Thunderbird. Sie werden aufgefordert ein Passwort einzugeben. Geben Sie dafür den Sicherheitscode ein. Die Bindestriche gehören zum Sicherheitscode. Nun wird Ihnen ein Text angezeigt. Markieren Sie den Abschnitt von der Zeile BEGIN PGP bis zur Zeile END PGP und kopieren Sie diesen in die Zwischenablage. Dies ist hier geheimer Schlüssel. Fügen Sie diesen anschließend ihrem GPG Keychain ein.
                         </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="heading">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#otherDevices" href="#collapseImport2" aria-expanded="false" aria-controls="collapse">
                                 Ich habe bereits einen privaten Schlüssel auf einem anderen Gerät. Wie kann ich den Schlüssel in Letterbox nutzen?
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div id="collapseImport2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
                         <div class="panel-body">
-                            
+                            <p>
+                                Übertragen Sie den öffentlichen Schlüssel (bzw. Schloss) aus Letterbox auf das andere Gerät. Sie können unter ID  und dann Details den öffentlichen Schlüssel in die Ablage kopieren und anschließend sich selbst per Mail zu senden. Anschließend können Sie mit diesem öffentlichen Schlüssel Ihren eigenen privaten Schlüssel verschlüsseln an die E-Mail-Adresse in Letterbox zu senden. Wenn die E-Mail geöffnet wird, wird der Schlüssel erkannt und es folgt eine Aufforderung zur Passwort eingabe. Falls Sie kein Passwort gewählt haben, klicken SIe bitte nur auf Import. Der private Schlüssel und ggf. das Passwort werden in der Keychain von iOS  gespeichert und ab dann auch für die Signierung von E-Mails verwendet. 
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -714,7 +759,7 @@
                     </div>
                     <div id="collapseNoLetters" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNoLetters">
                         <div class="panel-body">
-                            <p>Ein <a href="#secureMail">Brief</a> erfordert die Kooperation des Gegenübers. Bitten Sie Personen mitzumachen und laden Sie diese ein. Es wäre vorteilhaft, wenn diese auch iOS nutzen, aber für <a href="#headingOther">andere Geräte</a> steht Ende-Zu-Ende-Verschlüsselung auch zur Verfügung. Alternativ können Sie auch eine E-Mail an <a href="mailto:letterbox@zedat.fu-berlin.de?Subject=Test-Mail">letterbox@zedat.fu-berlin.de</a> versenden.</p>
+                            <p>Ein <a href="#secureMail">Brief</a> erfordert die Kooperation des Gegenübers. Bitten Sie Personen mitzumachen und laden Sie diese ein. Es wäre vorteilhaft, wenn diese auch iOS nutzen, aber für <a href="#headingOther">andere Geräte</a> steht Ende-Zu-Ende-Verschlüsselung auch zur Verfügung. Alternativ können Sie auch eine E-Mail an <a href="mailto:letterbox@inf.fu-berlin.de?Subject=Test-Mail">letterbox@inf.fu-berlin.de</a> versenden.</p>
                         </div>
                     </div>
                 </div>
@@ -742,7 +787,7 @@
                     </div>
                     <div id="collapseMysteryMail" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMysteryMail">
                         <div class="panel-body">
-                            <p>Das muss nicht unbedingt sein. Bitte behandeln Sie diese E-Mail, wie eine übliche merkwürdige/fragwürdige oder bösartige E-Mail und völlig unabhängig davon, ob wir oder jemand anders diese E-Mail versendet hat. Wir werden Sie zu einem späteren Zeitpunkt aufklären, welche E-Mails wir Ihnen zugesendet haben. Die Aufklärung erfolgt mittels eines Briefs von <a href="mailto:letterbox@zedat.fu-berlin.de?Subject=Fragwürdige%20E-Mail">letterbox@zedat.fu-berlin.de</a>.</p>
+                            <p>Das muss nicht unbedingt sein. Bitte behandeln Sie diese E-Mail, wie eine übliche merkwürdige/fragwürdige oder bösartige E-Mail und völlig unabhängig davon, ob wir oder jemand anders diese E-Mail versendet hat. Wir werden Sie zu einem späteren Zeitpunkt aufklären, welche E-Mails wir Ihnen zugesendet haben. Die Aufklärung erfolgt mittels eines Briefs von <a href="mailto:letterbox@inf.fu-berlin.de?Subject=Fragwürdige%20E-Mail">letterbox@inf.fu-berlin.de</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -756,7 +801,7 @@
                     </div>
                     <div id="collapseReInstall" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingReInstall">
                         <div class="panel-body">
-                            <p>Durch die erneute Installation wurde ein neuer geheimer/privater Schlüssel erzeugt und das alte gelöscht. Falls Sie vorher das Geheimnis auf ein anderes Gerät übertragen haben, können Sie es wieder zurück übertragen. Beachten Sie dazu bitte den <a href="#headingImport">ensprechenden Eintrag</a> im FAQ. Falls Sie Fragen haben oder Hilfe benötigen, kontaktieren Sie uns bitte unter: <a href="mailto:letterbox@zedat.fu-berlin.de?Subject=Neuinstallation">letterbox@zedat.fu-berlin.de</a>.</p>
+                            <p>Durch die erneute Installation wurde ein neuer geheimer/privater Schlüssel erzeugt und das alte gelöscht. Falls Sie vorher das Geheimnis auf ein anderes Gerät übertragen haben, können Sie es wieder zurück übertragen. Beachten Sie dazu bitte den <a href="#headingImport">ensprechenden Eintrag</a> im FAQ. Falls Sie Fragen haben oder Hilfe benötigen, kontaktieren Sie uns bitte unter: <a href="mailto:letterbox@inf.fu-berlin.de?Subject=Neuinstallation">letterbox@inf.fu-berlin.de</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -947,7 +992,7 @@
                     <li><a href="http://www.fu-berlin.de/">Freie Universität Berlin</a></li>
                     <li><a href="#process">Datenschutz</a></li>
                     <li><a href="http://www.fu-berlin.de/redaktion/impressum/">Impressum</a></li>
-                    <li> <a href="mailto:letterbox@zedat.fu-berlin.de?Subject=Kontakt">Kontaktieren</a></li>
+                    <li> <a href="mailto:letterbox@inf.fu-berlin.de?Subject=Kontakt">Kontaktieren</a></li>
                 </ul>
             </div>
         </div>
